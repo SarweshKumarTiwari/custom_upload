@@ -1,12 +1,11 @@
 "use client";
 
 import axios from "axios";
-import Image from "next/image";
 import { useState } from "react";
 
 export default function Home() {
   const [first, setfirst] = useState<File | null>(null);
-  const chunkSize = 10000;
+  const chunkSize = 1024*1024;
   async function sendNext() {
     if (!first) return;
     const chunksQuantity = Math.ceil((first.size) / chunkSize);
