@@ -8,8 +8,12 @@ export async function POST(req:Request){
         return ;
     }
     
-    const blob=(await req.body.getReader().read()).value!;
-    //console.log(req.headers.get("x-content-index"),blob.byteLength)
-    fs.promises.appendFile("./public/update.mp4",blob);
-    return NextResponse.json({success:req.headers.get("x-content-index")});
+   try {
+     const blob=(await req.body.getReader().read()).value!;
+     //console.log(req.headers.get("x-content-index"),blob.byteLength)
+     await fs.promises.appendFile(`./public/${req.headers.get("x-content-name")}`,blob);
+     return NextResponse.json({success:req.headers.get("x-content-index")});
+   } catch (error) {
+    
+   }
 }
