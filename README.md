@@ -13,7 +13,7 @@ Blob.slice(begin,end) // this returns a blob of given size
 
 When chunks are send with request then we append the incoming chunks in a file.
 ```javascript
-fs.promises.appendFile(filePath,blob)
+fs.promises.appendFile(filePath,blob) //appends chunk to initialized file
 ```
 
 ## Initializing
