@@ -8,7 +8,6 @@ document.getElementById("check").addEventListener('click',async ()=>{
 
 async function chunkUpload(file) {
     const chunkSize=2*1024*1024;
-    console.log(file)
     const chunksQuantity=Math.ceil(file.size/chunkSize);
     const totalChunks=new Array(chunksQuantity).fill(0).map((_,i)=>i).reverse();
     const total=totalChunks.length;
