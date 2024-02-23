@@ -3,11 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <input type="file" name="" id="file">
-    <button id="check" >submit</button>
+    <div class="container">
+        <div class="subcontainer">
+            <div style="display: flex; column-gap: 4px; align-items: center;">
+                <div class="textcontainer">
+                    <input type="text" style="width:fit-content;outline: none;border: 0px;">
+                </div>
+                <label for="file">check</label>
+                <input type="file" name="" id="file" style="visibility: hidden;display: none;">
+            </div>
+            <button id="check" style="width: fit-content; display: flex; align-self: center;">submit</button>
+        </div>
+    </div>
     <script type="module" src="add.js"></script>
 </body>
 </html>
