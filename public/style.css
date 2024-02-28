@@ -9,6 +9,8 @@
 .subcontainer{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-items: center;
     border: 1px solid brown;
     border-left: 2px solid brown;
     border-bottom: 2px solid brown;
@@ -23,4 +25,18 @@
     width: fit-content;
     padding: 6px;
    margin: auto;
+}
+.button{
+    width: fit-content;
+    border:1px solid rgb(129, 36, 36);
+    background-color: rgb(129, 36, 36);
+    color: white;
+    border-radius: 2px;
+    padding: 8px;
+}
+.div{
+    width: 100%;
+    border: 1px solid rgb(129, 36, 36);
+    border-radius: 2px;
+    padding: 2px;
 }

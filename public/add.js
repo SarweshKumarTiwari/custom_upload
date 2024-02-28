@@ -34,3 +34,12 @@ async function chunkUpload(file) {
         }
     }
 }
+document.getElementById("file").addEventListener("change",(e)=>{
+    const c=document.getElementById("changable");
+    const d=c.firstElementChild;
+    d.remove();
+    const h4=document.createElement('h4');
+    h4.innerText=e.target.files[0].name;
+    h4.style.color='rgb(129, 36, 36)';
+    c.appendChild(h4);
+})
